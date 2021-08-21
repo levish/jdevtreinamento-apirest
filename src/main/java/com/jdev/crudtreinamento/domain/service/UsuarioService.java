@@ -17,4 +17,6 @@ public class UsuarioService {
                 ()-> new EntidadeNaoEncontradaException(String.format("Usuario nao encontrado", usuarioId)));
 
     }
+
+
 }
