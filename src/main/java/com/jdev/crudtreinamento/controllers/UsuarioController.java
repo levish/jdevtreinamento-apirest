@@ -54,4 +54,19 @@ public class UsuarioController {
         usuarioRepository.deleteById(iduser);
         return new ResponseEntity<String>("User deletado com sucesso", HttpStatus.OK);
     }
+
+//    @GetMapping("/busca")
+//    public List<Usuario> buscarPorNome(@RequestParam(name = "name") String userName){
+//        return usuarioRepository.buscarPorNome(userName);
+//    }
+
+    @GetMapping("/busca/{userName}")
+    public List<Usuario> buscarPorNome(@PathVariable String userName){
+        return usuarioRepository.buscarPorNome(userName);
+    }
+
+//    @GetMapping("/{userId}")
+//    public Usuario buscaPorId(@PathVariable Long userId){
+//        return usuarioService.buscarOuFalhar(userId);
+//    }
 }
