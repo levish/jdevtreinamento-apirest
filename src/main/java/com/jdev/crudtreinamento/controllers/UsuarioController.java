@@ -62,11 +62,8 @@ public class UsuarioController {
 
     @GetMapping("/busca/{userName}")
     public List<Usuario> buscarPorNome(@PathVariable String userName){
-        return usuarioRepository.buscarPorNome(userName);
+        return usuarioRepository.buscarPorNome(userName.trim());
     }
 
-//    @GetMapping("/{userId}")
-//    public Usuario buscaPorId(@PathVariable Long userId){
-//        return usuarioService.buscarOuFalhar(userId);
-//    }
+
 }
